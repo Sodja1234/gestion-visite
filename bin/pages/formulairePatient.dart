@@ -11,7 +11,7 @@ class FormulairePatient implements Page {
 
   void generationChoix(String textChoix, List listeChoix) {
    
-    print(textChoix,);
+    print(textChoix);
     listeChoix.asMap().forEach((key, value) {
       int position = key + 1 ;
       print("$position : $value ")  ;
@@ -30,7 +30,7 @@ class FormulairePatient implements Page {
 
     service.creerPatient(Patient(
       nom: nom!,
-      genre: genre!,
+      genre: listeGenres.elementAt(int.parse(genre!)),
     ));
 
   }

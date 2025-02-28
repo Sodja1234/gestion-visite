@@ -67,8 +67,8 @@ class FormulaireVisiteur implements Page {
 
   }
 
-  void genererChoix(List<String> listes, String message)
-  {
+  void genererChoix(List<String> listes, String message){
+    
     listes.asMap().forEach((k, v) {
       message += "\n${k+1}. $v \n";
     });
